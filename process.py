@@ -91,13 +91,13 @@ with open("precipitation.csv", 'w') as precipitationFile, open("average-temperat
                     # Determine which file to write to
                     if ".prcp." in extractedFilename:
                         outputFile = precipitationFile
-                    else if ".tave." in extractedFilename:
+                    elif ".tave." in extractedFilename:
                         outputFile = averageTemperatureFile
-                    else if ".tmax." in extractedFilename:
+                    elif ".tmax." in extractedFilename:
                         outputFile = maxTemperatureFile
-                    else if ".tmin." in extractedFilename:
+                    elif ".tmin." in extractedFilename:
                         outputFile = minTemperatureFile
-                    else
+                    else:
                         raise Exception("Unknown file type: " + extractedFilename)
 
                     # Add a row
